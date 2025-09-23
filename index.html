@@ -317,8 +317,10 @@
             const footer = document.getElementById("page-footer");
 
             function toggleFooter() {
+              const scrolledToBottom =
+                window.innerHeight + window.scrollY >= document.documentElement.scrollHeight;
             
-              if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+              if (scrolledToBottom) {
                 footer.classList.add("show");
               } else {
                 footer.classList.remove("show");
@@ -326,8 +328,9 @@
             }
         
             window.addEventListener("scroll", toggleFooter);
-            window.addEventListener("load", toggleFooter); 
+            window.addEventListener("load", toggleFooter);
         </script>
+
 
     </body>
 </html>
