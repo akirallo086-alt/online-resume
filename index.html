@@ -18,7 +18,8 @@
             font-family: 'Quicksand', sans-serif;
             height: 100vh;
             margin: 0;
-            
+           background-attachment: fixed;
+
             } 
             main {
             flex: 1;
@@ -87,16 +88,15 @@
                 padding: 15px;
                 font-size: 14px;
                 text-align: center;
-                position:fixed;
+                position: sticky;
                 bottom: 0;
                 left: 0;
                 width: 100%;
                 border-top: 2px solid rgba(255,255,255,0.2);
-                display: none;
+                top: 100%;
+                
             }
-                #page-footer.show {
-                display: block; 
-                }
+                
             
              @media (max-width: 1024px){
                 .header img{
@@ -130,6 +130,10 @@
                 .intro p{
                     font-size: 2em;
                 }
+                #page-footer{
+                    font-size: 13px;
+                    top: 100%;
+                }
             }
 
                  @media (max-width: 768px){
@@ -162,8 +166,11 @@
                 .intro p{
                     font-size: 1.8em;
                 }
+                #page-footer{
+                    font-size: 12px;
+                    top: 100%;
                  }
-
+                }
 
             @media (max-width: 600px){
                 .header img{
@@ -200,6 +207,10 @@
                 .intro p{
                     font-size: 1.5em;
                 }
+                #page-footer{
+                    font-size: 12px;
+                    top: 100%;
+                }
             }
 
             @media (max-width: 480px) {
@@ -235,6 +246,10 @@
                 #page-footer{
                     font-size: 12px;
                     padding-left: 0%;
+                }
+                #page-footer{
+                    font-size: 11px;
+                    top: 100%;
                 }
             }
             @media (max-width: 360px) {
@@ -313,23 +328,7 @@
             </div>
         </footer>
 
-        <script>
-            const footer = document.getElementById("page-footer");
-
-            function toggleFooter() {
-              const scrolledToBottom =
-                window.innerHeight + window.scrollY >= document.documentElement.scrollHeight;
-            
-              if (scrolledToBottom) {
-                footer.classList.add("show");
-              } else {
-                footer.classList.remove("show");
-              }
-            }
-        
-            window.addEventListener("scroll", toggleFooter);
-            window.addEventListener("load", toggleFooter);
-        </script>
+       
 
 
     </body>
