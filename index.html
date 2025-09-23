@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+        
+        <style>
+        *{
+                margin: 0;
+                padding: 0;
+            }
+           body {
+           
+            background: linear-gradient(135deg, #0d0d0d, #004d4d, #006666);
+            color: #ffffff; 
+            font-family: 'Quicksand', sans-serif;
+            height: 100vh;
+            margin: 0;
+            
+            } 
+            main {
+            flex: 1;
+            }             
+            
+            .intro{
+                text-align: center;
+                font-family: 'Quicksand', sans-serif;
+                font-weight: bold;
+                color: white;
+            }
+            
+            .intro h1{
+                font-size: 5vw;
+            }
+    
+    
+            .intro p{
+                font-size: 3em;
+                
+            }
+
+            .header img{
+                height: 80px;
+                margin-left: 70px;
+                margin-top: 30px;
+            }
+            
+            .card img{
+                width: 330px;
+                height: 300px;
+                
+            }
+            .card{
+                height: 325px;
+                background-color: #fff;
+                border-radius: 25px;
+                overflow: hidden; width: 330px;
+                text-align: center;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow';
+                transition: transform 0.3s ease;
+                flex-shrink: 0;
+            }
+
+            .card p{
+                color: #000000;
+                font-size: 20px;
+                font-weight: bold;
+                font-family: 'Quicksand', sans-serif;
+            }
+
+            .card:hover {
+            transform: translateY(-8px);
+            }
+
+            .section-cards{
+                display: flex;
+                justify-content: center;
+                gap: 150px;
+                margin-top: 5%;
+                padding-bottom: 40px;
+            }
+            #page-footer{
+                background: #222; 
+                color: #aaa;
+                padding: 15px;
+                font-size: 14px;
+                text-align: center;
+                position:fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                border-top: 2px solid rgba(255,255,255,0.2);
+                display: none;
+            }
+                #page-footer.show {
+                display: block; 
+                }
+            
+             @media (max-width: 1024px){
+                .header img{
+                    height: 70px;
+                    margin-left: 50px;
+                    margin-top: 20px;
+                }
+                .card img{
+                    width: 280px;
+                    height: 250px;
+                }
+                .card{
+                    height: 275px;
+                    width: 280px;
+                    font-size: 18px;
+                }
+                .card p{
+                    color: #000000;
+                }
+                
+                .section-cards{
+                    gap: 50px;
+                    padding-top: 50px;
+                }
+                .intro{
+                    margin-top: 20px;
+                }
+                .intro h1{
+                    font-size: 5vw;
+                }
+                .intro p{
+                    font-size: 2em;
+                }
+            }
+
+                 @media (max-width: 768px){
+                .header img{
+                    height: 65px;
+                    margin-left: 40px;
+                    margin-top: 15px;
+            }
+                .card img{
+                    width: 225px;
+                    height: 220px;
+                }
+                .card{
+                    height: 250px;
+                    width: 225px;
+                    font-size: 17px;
+                    
+                }
+                
+                .section-cards{
+                    gap: 40px;
+                    padding-top: 40px;
+                }
+                .intro{
+                    margin-top: 15px;
+                }
+                .intro h1{
+                    font-size: 5.5vw;
+                }
+                .intro p{
+                    font-size: 1.8em;
+                }
+                 }
+
+
+            @media (max-width: 600px){
+                .header img{
+                    height: 50px;
+                    margin-left: 30px;
+                    margin-top: 15px;
+                }
+                .card img{
+                    height: 200px;
+                    width: 230px;
+                    
+                }
+                .card{
+                    height: 220px;
+                    width: 230px;
+                    
+                }
+                .card p{
+                    font-size: 14px;
+                }
+                
+                .section-cards{
+                    gap: 30px;
+                    padding-top: 30px;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .intro{
+                    margin-top: 10px;
+                }
+                .intro h1{
+                    font-size: 6vw;
+                }
+                .intro p{
+                    font-size: 1.5em;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .header img{
+                    height: 40px;
+                    margin-left: 20px;
+                    margin-top: 10px;
+                }
+                .card img{
+                    height: 180px;
+                    width: 200px;
+                    
+                }
+                .card{
+                    height: 200px;
+                    width: 200px;
+                    font-size: 14px;
+                }
+                
+                .section-cards{
+                    gap: 50px;
+                    padding-top: 60px;
+                }
+                .intro{
+                    margin-top: 5px;
+                }
+                .intro h1{
+                    font-size: 7vw;
+                }
+                .intro p{
+                    font-size: 1.2em;
+                }
+                #page-footer{
+                    font-size: 12px;
+                    padding-left: 0%;
+                }
+            }
+            @media (max-width: 360px) {
+                .header img{
+                    height: 35px;
+                    margin-left: 10px;
+                    margin-top: 5px;
+                }
+                .card img{
+                    width: 150px;
+                    height: 130px;
+                }
+                .card{
+                    height: 150px;
+                    width: 150px;
+                }
+                .card p{
+                    font-size: 11px;
+                }
+                .section-cards{
+                    gap: 50px;
+                    padding-top: 50px;
+                }
+                .intro{
+                    margin-top: 2px;
+                }
+                .intro h1{
+                    font-size: 8vw;
+                }
+                .intro p{
+                    font-size: 1em;
+                }
+                #page-footer{
+                    font-size: 10px;
+                    padding-left: 0%;
+                }
+            }
+             
+            
+
+           
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <nav>
+               <a href="index.html"><img src="images/transparent.png" alt="logo"></a>
+            </nav>
+        </header>
+
+        <section>
+            <div class="intro">
+            <h1>Welcome</h1>
+            <p>Meet our Aspiring Web Developer</p>
+            </div>
+
+            <section class="section-cards">
+
+                <div class="card">
+                    <a href="Erika.html"><img src="images/photo_6075587916207340827_y.jpg" alt="erika"></a>
+                    <p>Erika Babanto</p>
+                </div>
+
+                <div class="card">
+                    <a href="rachel.html"><img src="images/balmes.jpg" alt="rachel"></a>
+                    <p>Rachel Balmes</p>
+                 </div>
+
+            </section>
+
+        </section>
+
+        <footer id="page-footer">
+            <div class="footer-bottom">
+                <p>Copyright &copy; 2025 Techloom. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script>
+            const footer = document.getElementById("page-footer");
+
+            function toggleFooter() {
+            
+              if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                footer.classList.add("show");
+              } else {
+                footer.classList.remove("show");
+              }
+            }
+        
+            window.addEventListener("scroll", toggleFooter);
+            window.addEventListener("load", toggleFooter); 
+        </script>
+
+    </body>
+</html>
