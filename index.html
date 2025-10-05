@@ -5,252 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            min-height: 100vh;
-            background: linear-gradient(135deg, #0d0d0d, #004d4d, #006666);
-            color: #ffffff; 
-            font-family: 'Quicksand', sans-serif;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .header {
-            justify-content: space-between;
-            z-index: 1000;
-        }
-
-        .header img {
-            height: 80px;
-            padding: 8px;
-            margin-left: 50px;
-        }
-
-        main {
-            flex: 1; 
-        }
-
-        .intro {
-            text-align: center;
-            margin-top: 25px;
-            margin-bottom: 50px;
-        }
-
-        .intro h1 {
-            font-size: 5em;
-            margin-bottom: 0%;
-        }
-
-        .intro p {
-            font-size: 2em;
-        }
-
-        .card {
-            height: 290x;
-            width: 297px;
-            background-color: #fff;
-            border-radius: 16%;
-            overflow: hidden;
-            text-align: center;
-        }
-
-        .card p {
-            color: black;
-            font-size: 1.4em;
-            margin-top: 0px;
-        }
-
-        .card img {
-            height: 270px;
-            width: 297px;
-           
-        }
-
-        .section-cards {
-            display: flex;
-            justify-content: center;
-            flex-direction: row; 
-            gap: 100px;
-            margin: 130px 20px 50px 20px;
-        }
-
-        #page-footer {
-            background: #222; 
-            color: #aaa;
-            padding: 14px;
-            font-size: 14px;
-            text-align: center;
-            border-top: 2px solid rgba(255,255,255,0.2);
-            width: 100%;
-        }
-        @media (max-width: 1024px) {
-            .header img {
-                height: 50px;
-                margin-left: 20px;
-            }
-            .intro h1 {
-                font-size: 3em;
-            }
-            .intro p {
-                font-size: 1.5em;
-            }
-            .card {
-                height: 245px;
-                width: 270px;
-            }
-            .card p{
-                font-size: 1rem;
-                
-            }
-            .card img {
-                height: 220px;
-                width: 270px;
-            }
-            .section-cards {
-                gap: 80px;
-                margin: 70px 10px 30px 10px;
-            }
-        }
-        @media (max-width: 768px) {
-            .header img {
-                height: 60px;
-                margin-left: 10px;
-            }
-            .intro h1 {
-                font-size: 2em;
-            }
-            .intro p {
-                font-size: 1.2em;
-            }
-            .card {
-                height: 200px;
-                width: 220px;
-            }
-            .card img {
-                height: 180px;
-                width: 220px;
-            }
-            .section-cards {
-                gap: 70px;
-                margin: 80px 10px 30px 10px;
-            }
-        }
-        @media (max-width: 600px) {
-            .header img {
-                height: 60px;
-                margin-left: 5px;
-            }
-            .intro h1 {
-                font-size: 2rem;
-            }
-            .intro p {
-                font-size: 1em;
-            }
-            .card {
-                height: 200px;
-                width: 190px;
-            }
-            .card p{
-                font-size: 14px;
-            }
-            .card img {
-                height: 180px;
-                width: 190px;
-            }
-            #page-footer {
-                font-size: 13px;
-                padding: 15px;
-            }
-        }
-        @media (max-width: 527px) {
-            .section-cards {
-                gap: 60px;
-                margin: 90px 10px 30px 10px;
-            }
-            
-        }
-        
-        @media (max-width: 480px) {
-            .intro h1 {
-                font-size: 1.8em;
-            }
-            .intro p {
-                font-size: 1.3em;
-            }
-            .section-cards {
-                flex-direction: column;
-                align-items: center;
-                gap: 40px;
-                margin-top: 0px;
-            }
-            .card img{
-                height: 150px;
-                width: 195px;
-            }
-            .card {
-                height: 170px;
-                width: 195px;
-            }
-            #page-footer {
-                font-size: 12px;
-                padding: 14px;
-            }
-        }
-        @media (max-width: 360px) {
-            .intro h1 {
-                font-size: 1.5em;
-            }
-            .intro p {
-                font-size: 1.1em;
-            }
-            .card {
-                height: 170px;
-                width: 160px;
-            }
-            .card img {
-                height: 150px;
-                width: 160px;
-            }
-            .card p{
-                font-size: 10px;
-                margin-top: 0%;
-            }
-            #page-footer {
-                font-size: 11px;
-                padding: 13px;
-            }
-        }
-        
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="header">
         <nav>
-            <a href="index.html"><img src="images/transparent.png" alt="logo"></a>
+            <a href="index.html"><img src="image/transparent.png" alt="logo"></a>
         </nav>
     </header>
 
     <main>
-        <div class="intro">
-            <h1>Welcome</h1>
-            <p>Meet our Aspiring Web Developer</p>
-        </div>
-
+        <section class="intro">
+                <h1>Welcome</h1>
+                <p>Meet our Aspiring Web Developer</p>        
+        </section>
         <section class="section-cards">
             <div class="card">
-                <a href="Erika.html"><img src="images/photo_6075587916207340827_y.jpg" alt="erika"></a>
+                <a href="Erika/erika.html"><img src="image/photo_6075587916207340827_y.jpg" alt="erika"></a>
                 <p>Erika Babanto</p>
             </div>
 
             <div class="card">
-                <a href="rachel.html"><img src="images/balmes.jpg" alt="rachel"></a>
+                <a href="Rachel/rachel.html"><img src="image/balmes.jpg" alt="rachel"></a>
                 <p>Rachel Balmes</p>
             </div>
         </section>

@@ -1,0 +1,177 @@
+      * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0d0d0d, #004d4d, #006666);
+            color: #ffffff; 
+            font-family: 'Quicksand', sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            justify-content: space-between;
+            z-index: 1000;
+        }
+
+        .header img {
+            height: 80px;
+            padding: 8px;
+            margin-left: 50px;
+        }
+
+        main {
+            flex: 1; 
+        }
+
+        .intro {
+            text-align: center;
+            margin-top: 25px;
+            margin-bottom: 50px;
+        }
+
+        .intro h1 {
+            font-size: clamp(2.5em, 5vw, 6em);
+            margin-bottom: 0%;
+        }
+
+        .intro p {
+            font-size: clamp(1.3em, 3vw, 2em);
+        }
+
+        .card {
+            height: 290x;
+            width: 297px;
+            background-color: #fff;
+            border-radius: 16%;
+            overflow: hidden;
+            text-align: center;
+        }
+
+
+        .card p {
+            color: black;
+            font-size: clamp(0.9em, 2vw, 1.5em);
+            margin-top: 0px;
+        }
+
+        .card img {
+            height: 270px;
+            width: 297px;                       
+            flex-shrink: 0;
+        }
+
+        .section-cards {
+            display: flex;            
+            flex-direction: row;
+            justify-content: center;
+            gap: 100px;
+            margin: 130px 20px 50px 20px;
+        }
+
+        #page-footer {
+            background: #222; 
+            color: #aaa;
+            padding: 14px;
+            font-size: 14px;
+            text-align: center;
+            border-top: 2px solid rgba(255,255,255,0.2);
+            width: 100%;
+        }
+
+        @media (max-width: 1024px) {
+            .header img {
+                height: 50px;
+                margin-left: 20px;
+            }            
+            .card {
+                height: 245px;
+                width: 270px;
+            }            
+            .card img {
+                height: 220px;
+                width: 270px;
+            }
+            .section-cards {
+                gap: 80px;
+                margin: 70px 10px 30px 10px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header img {
+                height: 60px;
+                margin-left: 10px;
+            }
+            .card {
+                height: 204px;
+                width: 210px;
+            }
+            .card img {
+                height: 180px;
+                width: 210px;
+            }
+            .section-cards {
+                gap: 70px;
+                margin: 80px 10px 30px 10px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .header img {
+                height: 60px;
+                margin-left: 5px;
+            }
+            .card {
+                height: 190px;
+                width: 185px;
+            }            
+            .card img {
+                height: 170px;
+                width: 185px;
+            }
+            #page-footer {
+                font-size: 13px;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {            
+            .section-cards {
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+                margin-top: 0px;
+            }
+            .card img{
+                height: 150px;
+                width: 195px;
+            }
+            .card {
+                height: 170px;
+                width: 195px;
+            }
+            #page-footer {
+                font-size: 12px;
+                padding: 14px;
+            }
+        }
+
+        @media (max-width: 360px) {    
+            .card {
+                height: 150px;
+                width: 150px;
+            }
+            .card img {
+                height: 130px;
+                width: 150px;
+            }            
+            #page-footer {
+                font-size: 11px;
+                padding: 13px;
+            }
+        }
